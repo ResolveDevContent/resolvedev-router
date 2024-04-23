@@ -1,6 +1,8 @@
 import { Link } from "../components/Link"
 
-export default function SobreNosotros() {
+export default function SobreNosotros({ routeParams }) {
+    console.log(routeParams.lang)
+    
     return (
         <>
             <div>
