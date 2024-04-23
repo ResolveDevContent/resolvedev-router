@@ -10,7 +10,7 @@ const LazyAboutPage = lazy(() => import('./pages/SobreNosotros.jsx'))
 const appRoutes = [
   {
     path: '/about/:lang',
-    Component: LazyAboutPage
+    component: LazyAboutPage
   },
 ]
 

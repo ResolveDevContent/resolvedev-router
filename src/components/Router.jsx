@@ -33,6 +33,7 @@ export function Router({ children, routes = [ ], defaultComponent: DefaultCompon
 
         const matcherUrl = match(path, { decode: decodeURIComponent })
         const matched = matcherUrl(currentPath)
+        
         if (!matched) return false
 
         routeParams = matched.params
