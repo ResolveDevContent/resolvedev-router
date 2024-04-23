@@ -1,30 +1,17 @@
-import { useEffect, useState } from 'react';
 import './App.css'
+import { Router } from './components/Router';
 import Inicio from './pages/Inicio';
 import SobreNosotros from './pages/SobreNosotros';
-import { EVENTS } from './consts';
+import Page404 from './pages/Page404';
 
 function App() {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname)
-  
-  useEffect(() => {
-    const onLocationChange = () => {
-      setCurrentPath(window.location.pathname)
-    }
-
-    window.addEventListener(EVENTS.PUSHSTATE, onLocationChange)
-    window.addEventListener(EVENTS.POPSTATE, onLocationChange)
-
-    return () => {
-      window.removeEventListener(EVENTS.PUSHSTATE, onLocationChange)
-      window.removeEventListener(EVENTS.POPSTATE, onLocationChange)
-    }
-  }, [])
-
   return (
     <main>
-      {currentPath === "/" && <Inicio />}
-      {currentPath === "/about" && <SobreNosotros />}
+      <Router routes={[]} defaultComponent={Page404}>
+        <route path='a don wanna sleep' />
+        <route path='/' component={Inicio} />
+        <route path='/about' component={SobreNosotros} />
+      </Router>      
     </main>
   )
 }
