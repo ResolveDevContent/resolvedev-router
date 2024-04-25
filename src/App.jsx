@@ -17,7 +17,7 @@ const appRoutes = [
 function App() {
   
   return (
-    <main>
+    <main className='container'>
       <Suspense fallback={null}>
         <Router routes={appRoutes} defaultComponent={Page404}>
           <Route path='/' component={LazyHomePage} />
