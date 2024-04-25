@@ -1,4 +1,4 @@
-import { Link, navigate } from "../components/Link";
+import { navigate } from "../components/Link";
 import { useState } from "react"
 
 export default function SobreNosotros({ routeParams }) {
@@ -9,7 +9,6 @@ export default function SobreNosotros({ routeParams }) {
         e.preventDefault();
 
         juancarlos === "es" ? setJuancarlos("en") : setJuancarlos("es")
-        console.log(lang, juancarlos)
         navigate("/about/" + juancarlos)
     }
 
@@ -50,9 +49,6 @@ export default function SobreNosotros({ routeParams }) {
                         Thank you for choosing [Company Name]. We are excited to accompany you on your journey to [customer benefit or goal]. Please feel free to contact us if you have any questions or need assistance. We look forward to serving you soon!`
                     ) : null}
                 </span>
-                <br />
-                <br />
-                <Link to="/">Ir a home</Link>
             </div>
         </>
     )

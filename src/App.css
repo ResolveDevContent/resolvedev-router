@@ -1,5 +1,18 @@
+
 .container {
     margin: 2em;
+}
+
+.container > header > nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container > header > nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
 
 .about header {
